@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "email": "deepmshah113@gmail.com",
+      "name": "Deep",
+      "totalEmployee":10,
+      "address": "Leaf rake with 48-inch wooden handle.",
+      "isCompanyActive": true,
+      "totalBranch": 5
+   
+      
+  
+    },
+    {
+        "id": 2,
+        "email": "deepmshah113@gmail.com",
+        "name": "Deep",
+        "totalEmployee":10,
+        "address": "Leaf rake with 48-inch wooden handle.",
+        "isCompanyActive": true,
+        "totalBranch": 5
+       
+      
+      }
+]

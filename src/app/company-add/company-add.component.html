@@ -1,0 +1,83 @@
+<div style="margin-top: 60px;" class="container">
+    <h1>Create</h1>
+        <div class="row">
+            <div class="col-md-8">
+
+         
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()"  #formDir="ngForm">
+        <div class="form-group row">
+          <label class=" control-label col-md-12">EmailId</label>
+          <div class="col-md-12">
+            <input  formControlName="emailID" class="form-control" type="text" >
+            <!-- <div *ngIf="registrationForm.emailID.touched && registrationForm.emailID.is-invalid">
+                    Name is required
+            </div> -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class=" control-label col-md-12">Name</label>
+          <div class="col-md-12">
+            <input formControlName="name" class="form-control" type="text" >
+            
+          </div>
+        </div>
+        <!-- <div class="form-group row">
+            <label class=" control-label col-md-12">Total Employee</label>
+            <div class="col-md-12">
+              <input class="form-control" type="number" >
+            
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class=" control-label col-md-12">Address</label>
+            <div class="col-md-12">
+              <input class="form-control" type="text" >
+            
+            </div>
+          </div>
+          <div class="form-group">
+              <input type="checkbox" > Is Company Active
+             
+          </div>
+          <div class="form-group row">
+            <label class=" control-label col-md-12">totalBranch</label>
+            <div class="col-md-12">
+              <input class="form-control"  type="text" >
+            
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class=" control-label col-md-12">Branch Id</label>
+            <div class="col-md-12">
+              <input class="form-control" type="number" >
+            
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class=" control-label col-md-12">Branch Name</label>
+            <div class="col-md-12">
+              <input class="form-control"  type="text" >
+              
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class=" control-label col-md-12">Branch Address</label>
+            <div class="col-md-12">
+              <input class="form-control"  type="text" >
+            
+            </div>
+          </div> -->
+        <div class="form-group">
+          <button type="submit" class="btn btn-success float-right"  >Save</button>
+          <a [routerLink]="['/company-list']" class="btn btn-primary float-right mb-3">Cancle</a>
+        <button  class="btn btn-success" (click)='loadApiData()'>Load</button>
+        </div>
+      </form>
+      
+      </div>
+      {{registrationForm.value | json}}
+      </div>
+    
+    </div>
+
+   

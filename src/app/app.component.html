@@ -11,8 +11,8 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
       <div class="sb-sidenav-menu">
         <div class="nav">
-          <a class="nav-link" href="index.html">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <a class="nav-link" [routerLink]="['/company-list']">
+            <div class="sb-nav-link-icon"><i class="fa fa-tachometer" aria-hidden="true"></i></div>
             Dashboard
           </a>
         </div>
@@ -21,4 +21,8 @@
   </div>
 
 </div>
-<app-company-list></app-company-list>
+
+  <!--Here All the routing component will display-->
+  <router-outlet></router-outlet>
+
+<!-- <app-company-list></app-company-list> -->

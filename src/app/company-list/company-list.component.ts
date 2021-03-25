@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ICompany } from './company';
+import { CompanyService } from './company.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-company-list',
@@ -8,27 +11,42 @@ import { Component, OnInit } from '@angular/core';
 export class CompanyListComponent implements OnInit {
 
   tableTitle:string="Company List";
-  companys:any[]=[
-    {
-      
-      "id":"1",
-      "email":"deepmshah113@gmail.com",
-      "name":"Deep",
-      "totalEmployee":10,
-      "address":"Umreth",
-      "isCompanyActive":true,
-      "totalBranch":4,
-      "companyBranch":[{
-                      "branchId":"1",
-                      "branchName":"Prince",
-                      "address":"Umreth"
-      }]
-
-    }
-  ]
-  constructor() { }
-
+  companies:ICompany[]=[];
+  errorMessage:string='';
   ngOnInit(): void {
+
+    this.companyService.getCompany()
+      .subscribe((data: ICompany[]) => {
+        this.companies = data;
+        console.log(data);
+      });
+    //   this.companyService.getCompany().subscribe({
+    //   next:companies=>{
+    //     this.companies=companies;
+    //   },
+    //   error:err =>this.errorMessage=err
+    // });
+
   }
+
+  deleteCompany(company: ICompany){
+    this.companyService.delete(company.id).subscribe(data => {
+     this.companyService.getCompany()
+     .subscribe((data: ICompany[]) => {
+       this.companies = data;
+     });
+   });
+   };
+
+   editCompany(company: ICompany): void {
+    localStorage.removeItem('companyId');
+    localStorage.setItem('companyId', company.id.toString());
+    this.router.navigate(['company-update']);
+  }
+
+  constructor(private companyService:CompanyService,private router: Router) {}
+
+
+  
 
 }

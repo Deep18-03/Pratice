@@ -1,6 +1,6 @@
 export interface ICompany{
     "id":number,
-    "email":string,
+    "emailID":string,
     "name":string,
     "totalEmployee":number
     "address":string,
@@ -10,5 +10,6 @@ export interface ICompany{
                     "branchId":number,
                     "branchName":string,
                     "address":string
+                }]
 
 }
