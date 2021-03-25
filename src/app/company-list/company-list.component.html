@@ -1,0 +1,45 @@
+<section class="center">
+    <div class="card mb-4">
+        <div class="card-header">
+           <h4>{{tableTitle}}</h4> 
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" *ngIf='companys.length'>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Email</th>
+                            <th>Name</th>
+                            <th>TotalEmployee</th>
+                            <th>Address</th>
+                            <th>Active</th>
+                            <th>TotalBranch</th>
+                            <th>companyBranch</th>
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        <tr *ngFor='let company of companys'>
+                            <td>{{company.id}}</td>
+                            <td>{{company.email}}</td>
+                            <td>{{company.name | titlecase}}</td>
+                            <td>{{company.totalEmployee}}</td>
+                            <td>{{company.address}}</td>
+                            <td>{{company.isCompanyActive}}</td>
+                            <td>{{company.totalBranch}}</td>
+                            <td>{{company.companyBranch.branchid}}</td>
+                        </tr>
+                     
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready( function () {
+   $('#dataTable').DataTable();
+} );
+</script>
