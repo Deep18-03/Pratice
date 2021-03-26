@@ -10,11 +10,12 @@ import { Router } from '@angular/router';
 })
 export class CompanyListComponent implements OnInit {
 
-  tableTitle:string="Company List";
-  companies:ICompany[]=[];
-  errorMessage:string='';
-  ngOnInit(): void {
+  tableTitle: string = "Company List";
+  companies: ICompany[] = [];
+  errorMessage: string = '';
 
+  ngOnInit(): void {
+    //To get all data of company 
     this.companyService.getCompany()
       .subscribe((data: ICompany[]) => {
         this.companies = data;
@@ -28,25 +29,30 @@ export class CompanyListComponent implements OnInit {
     // });
 
   }
-
-  deleteCompany(company: ICompany){
+  //delete method to delete specific company
+  deleteCompany(company: ICompany) {
     this.companyService.delete(company.id).subscribe(data => {
-     this.companyService.getCompany()
-     .subscribe((data: ICompany[]) => {
-       this.companies = data;
-     });
-   });
-   };
+      this.companyService.getCompany()
+        .subscribe((data: ICompany[]) => {
+          this.companies = data;
+        });
+    });
+  };
 
-   editCompany(company: ICompany): void {
+  //Edit method will navigate to update page
+  editCompany(company: ICompany): void {
     localStorage.removeItem('companyId');
     localStorage.setItem('companyId', company.id.toString());
     this.router.navigate(['company-update']);
   }
 
-  constructor(private companyService:CompanyService,private router: Router) {}
 
+  // ViewComapny(company: ICompany):void{
+  //   localStorage.removeItem('companyId');
+  //   localStorage.setItem('companyId', company.id.toString());
+  //   this.router.navigate(['company-view']);
+  // }
+  constructor(private companyService: CompanyService, private router: Router) { }
 
-  
 
 }

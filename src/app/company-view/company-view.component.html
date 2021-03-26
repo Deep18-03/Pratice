@@ -1,0 +1,45 @@
+<section class="center" style="margin: 300px;">
+    <h4>Company Name:{{companies?.name}}</h4>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" width="100%" cellspacing="0">
+                    <thead style="font-size: larger; font-weight: 500;">
+                     <td>Field</td>
+                     <td>Detail</td>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                          <td>Id</td>
+                          <td>{{companies?.id}}</td>
+                      </tr>
+                      <tr>
+                          <td>Address</td>
+                          <td>{{companies?.address}}</td>
+                      </tr>
+                      <tr>
+                          <td>Email</td>
+                          <td>{{companies?.emailID}}</td>
+                      </tr>
+                      <tr>
+                          <td>totalEmployee</td>
+                          <td>{{companies?.totalEmployee}}</td>
+                      </tr>
+                      <tr>
+                          <td>isCompanyActive</td>
+                          <td>{{companies?.isCompanyActive}}</td>
+                      </tr>
+                      <tr>
+                          <td>isCompanyActive</td>
+                          <td>{{companies?.companyBranch}}</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- <p>company-view works!</p> -->
+        <button class="btn btn-primary" (click)='goBack()'>Go Back</button>
+</section>
+

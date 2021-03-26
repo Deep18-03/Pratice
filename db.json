@@ -1,9 +1,32 @@
 {
   "company": [
     {
+      "id": 5,
+      "emailID": "deep.shah@thegatewaycorp.co.in",
+      "name": "Sunnya",
+      "totalEmployee": 324,
+      "address": "deepmssadad",
+      "isCompanyActive": true,
+      "totalBranch": "2",
+      "companyBranch": {
+        "branchId": 3,
+        "branchName": "sadsad",
+        "branchAddress": "adssad"
+      }
+    },
+    {
       "emailID": "deepmshah113@gmail.com",
       "name": "DEEP",
-      "id": 2
+      "totalEmployee": 4,
+      "address": "deepmssadad",
+      "isCompanyActive": true,
+      "totalBranch": "5",
+      "companyBranch": {
+        "branchId": 3,
+        "branchName": "eqwe",
+        "branchAddress": "qwewqe"
+      },
+      "id": 6
     }
   ]
 }

@@ -1,1 +1,74 @@
-<p>company-update works!</p>
+<div style="margin-top: 60px;" class="container">
+  <h2 class="text-center">{{companyLabel}}</h2>
+  <div class="row">
+    <div class="col-md-8">
+      <!-- Form start    -->
+      <form [formGroup]="updateForm" (ngSubmit)="onUpdate()" class="form">
+        <!-- Email field -->
+        <div class="form-group row">
+          <label class=" control-label col-md-12">EmailId</label>
+          <div class="col-md-12">
+            <input class="form-control" type="text" formControlName="emailID" >
+          </div>
+        </div>
+        <!-- Name field -->
+        <div class="form-group row">
+          <label class=" control-label col-md-12">Name</label>
+          <div class="col-md-12">
+            <input class="form-control" type="text" formControlName="name">
+          </div>
+        </div>
+        <!-- Total Employee Field -->
+        <div class="form-group row">
+          <label class=" control-label col-md-12">Total Employee</label>
+          <div class="col-md-12">
+            <input class="form-control" type="number" formControlName="totalEmployee" >
+          </div>
+        </div>
+         <!-- Address Field -->
+        <div class="form-group row">
+          <label class=" control-label col-md-12">Address</label>
+          <div class="col-md-12">
+            <input class="form-control" type="text" formControlName="address" >
+          </div>
+        </div>
+         <!-- Active Field -->
+        <div class="form-group">
+          <input type="checkbox" formControlName="isCompanyActive" > Is Company Active
+        </div>
+        <!-- totalBranch Field -->
+        <div class="form-group row">
+          <label class=" control-label col-md-12">Total Branch</label>
+          <div class="col-md-12">
+            <input class="form-control" type="text" formControlName="totalBranch" >
+          </div>
+        </div>
+        <!-- BranchId Field -->
+        <div class="form-group row">
+          <label class=" control-label col-md-12">Branch Id</label>
+          <div class="col-md-12">
+            <input class="form-control" type="number" formControlName="branchId" >
+          </div>
+        </div>
+        <!-- BranchName Field -->
+        <div class="form-group row">
+          <label class=" control-label col-md-12">Branch Name</label>
+          <div class="col-md-12">
+            <input class="form-control" type="text" formControlName="branchName" >
+          </div>
+        </div>
+        <!-- Branch Address Field -->
+        <div class="form-group row">
+          <label class=" control-label col-md-12">Branch Address</label>
+          <div class="col-md-12">
+            <input class="form-control" type="text" formControlName="branchAddress" >
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Update</button>
+      </form>
+
+    </div>
+    <!-- {{updateForm.value | json}} -->
+  </div>
+
+</div>

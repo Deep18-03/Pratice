@@ -4,6 +4,7 @@ import { CompanyAddComponent } from './company-add/company-add.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { CompanyUpdateComponent } from './company-update/company-update.component';
+import { CompanyViewComponent } from './company-view/company-view.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,14 @@ const routes: Routes = [
   {
     path:'company-update',
     component:CompanyUpdateComponent
+  },
+  {
+    path:'company-view',
+    component:CompanyViewComponent
+  },
+  {
+    path:'companies/:id',
+    component:CompanyViewComponent
   },
   {
       path:'',

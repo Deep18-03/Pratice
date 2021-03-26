@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CompanyAddComponent } from './company-add/company-add.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { CompanyUpdateComponent } from './company-update/company-update.component';
+import { CompanyViewComponent } from './company-view/company-view.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CompanyUpdateComponent } from './company-update/company-update.componen
     CompanyListComponent,
     CompanyAddComponent,
     NopagefoundComponent,
-    CompanyUpdateComponent
+    CompanyUpdateComponent,
+    CompanyViewComponent
   ],
   imports: [
     BrowserModule,
